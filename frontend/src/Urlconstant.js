@@ -1,7 +1,7 @@
-const API_URL = "http://localhost:3001";
+const API_URL = "https://taskphin.vercel.app";
 
 export const UrlConstant = {
-    getCandidates: `${API_URL}/candidates`,
-    addCandidate: `${API_URL}/addCandidate`,
-    getCandidateById: `${API_URL}/candidates/`,
-}
+  getCandidates: `${API_URL}/candidates`,
+  addCandidate: `${API_URL}/addCandidate`,
+  getCandidateById: `${API_URL}/candidates/`,
+};
