@@ -1,14 +1,15 @@
 const { Pool } = require("pg");
 
 // Create a new Pool instance with your PostgreSQL connection details
-const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "candidates_db",
-  password: "Bunty@1234",
-  port: 5432, // Default PostgreSQL port
-});
 
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+});
+console.log(process.env.POSTGRES_URL);
+pool.connect((err) => {
+  if (err) throw err;
+  console.log("connection successful");
+});
 // CREATE operation
 async function createCandidate(
   name,
